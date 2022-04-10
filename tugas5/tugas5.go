@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"reflect"
 )
 
 type pelajar struct {
@@ -21,4 +22,7 @@ func main() {
 	fmt.Println(n1.nama, " ", n1.umur)
 	fmt.Println(n2.nama, " ", n2.umur)
 	fmt.Println(n3.nama, " ", n3.umur)
+
+	var1 := 12
+	fmt.Println(reflect.ValueOf(var1).Type())
 }
