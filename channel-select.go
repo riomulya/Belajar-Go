@@ -7,8 +7,9 @@ import (
 
 func main() {
 	runtime.GOMAXPROCS(2)
-
+	go spamData(100, "Beliau Ini Kocak Geming")
 	number := []int{12, 321, 112, 321, 23, 123, 667, 1}
+
 	fmt.Println("Isi Slice : ", number)
 
 	channel1 := make(chan int)
@@ -43,4 +44,10 @@ func getMax(nilai []int, ch chan int) {
 		}
 	}
 	ch <- max
+}
+
+func spamData(banyak int, pesan string) {
+	for i := 0; i < banyak; i++ {
+		fmt.Println(pesan)
+	}
 }
