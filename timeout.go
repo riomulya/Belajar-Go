@@ -31,7 +31,6 @@ loop:
 			fmt.Println("Terima Data - ", data)
 		case <-time.After(time.Second * 5):
 			fmt.Println("Error TimeOut, Tidak Ada Aktivitas Dalam Waktu Tertentu")
-
 			break loop
 		}
 
