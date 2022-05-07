@@ -8,6 +8,13 @@ import (
 
 var baseUrl = "http://localhost:8080"
 
+type pelajar struct {
+	id    int
+	nama  string
+	kelas int
+	umur  int
+}
+
 func ambilApi() ([]pelajar, error) {
 	var err error
 	var client = &http.Client{}
@@ -30,7 +37,7 @@ func ambilApi() ([]pelajar, error) {
 	return data, nil
 }
 
-func req() {
+func main() {
 	var datapel, err = ambilApi()
 	if err != nil {
 		fmt.Println("Error!", err.Error())
